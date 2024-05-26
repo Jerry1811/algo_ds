@@ -13,6 +13,18 @@ const isPowerOfTwo = n => {
   return true;
 };
 
-console.log(isPowerOfTwo(1));
-console.log(isPowerOfTwo(2));
-console.log(isPowerOfTwo(5));
+// console.log(isPowerOfTwo(1));
+// console.log(isPowerOfTwo(2));
+// console.log(isPowerOfTwo(5));
+
+const isPowerOfTwoBitwise = n => {
+  if (n < 1) {
+    return false;
+  }
+
+  return (n & (n - 1)) === 0;
+};
+
+console.log(isPowerOfTwoBitwise(1));
+console.log(isPowerOfTwoBitwise(2));
+console.log(isPowerOfTwoBitwise(5));
